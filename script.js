@@ -1,4 +1,4 @@
-// Dynamic navbar background on scroll
+// Navbar background on scroll
 window.addEventListener('scroll', function() {
     const nav = document.querySelector('nav');
     if(window.scrollY > 50) {

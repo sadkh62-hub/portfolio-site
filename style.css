@@ -6,7 +6,7 @@ body, html {
     scroll-behavior: smooth;
 }
 
-/* Navigation */
+/* Navbar */
 nav {
     position: fixed;
     width: 100%;
@@ -44,7 +44,7 @@ nav ul li a:hover {
 
 /* Home Section */
 header {
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1950&q=80') no-repeat center/cover;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -53,85 +53,37 @@ header {
     color: #fff;
 }
 
-header h1 {
-    font-size: 48px;
-    margin: 0;
-}
-
-header p {
-    font-size: 24px;
-    margin: 15px 0;
-}
-
-header .btn {
-    background-color: #0077cc;
-    color: #fff;
-    padding: 12px 25px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background 0.3s;
-}
-
-header .btn:hover {
-    background-color: #005fa3;
-}
+header h1 { font-size: 48px; margin: 0; }
+header p { font-size: 24px; margin: 15px 0; }
+header .btn { background-color: #0077cc; color: #fff; padding: 12px 25px; border-radius: 5px; text-decoration: none; transition: background 0.3s; }
+header .btn:hover { background-color: #005fa3; }
 
 /* Sections */
-section {
-    padding: 80px 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-section h2 {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 40px;
-}
+section { padding: 80px 20px; max-width: 1000px; margin: auto; }
+section h2 { text-align: center; font-size: 36px; margin-bottom: 40px; }
 
 /* Services & Projects */
-.services-list, .projects-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+.services-list, .projects-list, .team-list {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;
 }
 
-.service, .project {
-    background-color: #fff;
-    padding: 25px;
-    width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+.service, .project, .team-member {
+    background-color: #fff; padding: 25px; width: 280px; border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.service:hover, .project:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-}
+.service:hover, .project:hover, .team-member:hover { transform: translateY(-10px); box-shadow: 0 8px 25px rgba(0,0,0,0.2); }
+
+.team-member img { width: 100%; border-radius: 50%; margin-bottom: 15px; }
 
 /* Links */
-a {
-    color: #0077cc;
-}
+a { color: #0077cc; }
 
 /* Footer */
-footer {
-    text-align: center;
-    background-color: #222;
-    color: #fff;
-    padding: 25px 0;
-    margin-top: 40px;
-}
+footer { text-align: center; background-color: #222; color: #fff; padding: 25px 0; margin-top: 40px; }
 
 /* Responsive */
 @media(max-width:768px){
-    nav {
-        flex-direction: column;
-    }
-    .services-list, .projects-list {
-        flex-direction: column;
-        align-items: center;
-    }
+    nav { flex-direction: column; }
+    .services-list, .projects-list, .team-list { flex-direction: column; align-items: center; }
 }
