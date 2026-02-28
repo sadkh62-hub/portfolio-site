@@ -1,18 +1,56 @@
-/* General Styles */
-body {
+/* General */
+body, html {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
 }
 
-/* Header */
+/* Navigation */
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+
+nav .logo {
+    font-weight: bold;
+    font-size: 20px;
+    color: #0077cc;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #0077cc;
+}
+
+/* Home Section */
 header {
-    background-color: #0077cc;
-    color: #fff;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 60px 20px;
+    color: #fff;
 }
 
 header h1 {
@@ -22,41 +60,60 @@ header h1 {
 
 header p {
     font-size: 24px;
-    margin: 10px 0 0;
+    margin: 15px 0;
+}
+
+header .btn {
+    background-color: #0077cc;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+header .btn:hover {
+    background-color: #005fa3;
 }
 
 /* Sections */
 section {
-    padding: 40px 20px;
-    max-width: 900px;
+    padding: 80px 20px;
+    max-width: 1000px;
     margin: auto;
 }
 
 section h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
     text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
 }
 
-.project-list {
+/* Services & Projects */
+.services-list, .projects-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
+    gap: 20px;
 }
 
-.project {
+.service, .project {
     background-color: #fff;
-    padding: 20px;
-    width: 250px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 25px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Contact */
-.contact a {
+.service:hover, .project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* Links */
+a {
     color: #0077cc;
-    text-decoration: none;
 }
 
 /* Footer */
@@ -64,6 +121,17 @@ footer {
     text-align: center;
     background-color: #222;
     color: #fff;
-    padding: 20px 0;
+    padding: 25px 0;
     margin-top: 40px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    nav {
+        flex-direction: column;
+    }
+    .services-list, .projects-list {
+        flex-direction: column;
+        align-items: center;
+    }
 }
